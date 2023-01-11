@@ -1,7 +1,7 @@
 import os
 from sensor.constant.s3_bucket import TRAINING_BUCKET_NAME
 SAVED_MODEL_DIR =os.path.join("saved_models")
-"""constant varaibled for training pipeline."""
+"""constant varaibles for training pipeline."""
 TARGET_COLUMN = 'class'
 PIPELINE_NAME = "sensor"
 ARTIFACT_DIR = "artifact"
@@ -10,12 +10,12 @@ TRAIN_FILE_NAME = "train.csv"
 TEST_FILE_NAME = "test.csv"
 PREPROCESSING_OBJECT_FILE_NAME = "preprocessing.pkl"
 MODEL_FILE_NAME = "model.pkl"
-SCHEMA_FILE_PATH = os.path.join("config","schema.yaml")
+SCHEMA_FILE_PATH =os.path.join("config","schema.yaml") #"D:\sensor-fault-detection\config\schema.yaml"
 SCHEMA_DROP_COLS = "drop_columns"
 
 
 """
-Data Ingestion related constant start with DATA_INGESTION VAR NAME
+Data Ingestion related constants start with DATA_INGESTION VAR NAME
 """
 DATA_INGESTION_COLLECTION_NAME: str = "car"
 DATA_INGESTION_DIR_NAME: str = "data_ingestion"
@@ -24,7 +24,7 @@ DATA_INGESTION_INGESTED_DIR: str = "ingested"
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATION: float = 0.2
 
 """
-Data Validation realted contant start with DATA_VALIDATION VARIABLE NAME
+Data Validation realted contants start with DATA_VALIDATION VARIABLE NAME
 """
 
 DATA_VALIDATION_DIR_NAME: str = "data_validation"
@@ -34,7 +34,7 @@ DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DATA_VALIDATION_DRIFT_REPORT_FILE_NAME: str = "report.yaml"
 
 """
-Data Transformation ralated constant start with DATA_TRANSFORMATION VARIABLE NAME
+Data Transformation ralated constants start with DATA_TRANSFORMATION VARIABLE NAME
 """
 
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
@@ -42,7 +42,7 @@ DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
 
 """
-Model Trainer ralated constant start with MODE TRAINER VARIABLE NAME
+Model Trainer ralated constants start with MODE TRAINER VARIABLE NAME
 """
 
 MODEL_TRAINER_DIR_NAME: str = "model_trainer"
@@ -53,7 +53,7 @@ MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD: float = 0.05
 
 
 """
-Model Trainer ralated constant start with MODE TRAINER VARIABLE NAME
+Model Trainer ralated constants start with MODE TRAINER VARIABLE NAME
 """
 MODEL_EVALUATION_DIR_NAME: str = "model_evaluation"
 MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
