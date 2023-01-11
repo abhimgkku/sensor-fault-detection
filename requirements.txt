@@ -1,3 +1,4 @@
+xgboost
 imblearn
 dill
 pymongo[srv]==4.2.0
