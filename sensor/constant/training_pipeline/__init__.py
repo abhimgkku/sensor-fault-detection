@@ -24,7 +24,7 @@ DATA_INGESTION_INGESTED_DIR: str = "ingested"
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATION: float = 0.2
 
 """
-Data Validation realted contants start with DATA_VALIDATION VARIABLE NAME
+Data Validation related contants start with DATA_VALIDATION VARIABLE NAME
 """
 
 DATA_VALIDATION_DIR_NAME: str = "data_validation"
@@ -34,7 +34,7 @@ DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
 DATA_VALIDATION_DRIFT_REPORT_FILE_NAME: str = "report.yaml"
 
 """
-Data Transformation ralated constants start with DATA_TRANSFORMATION VARIABLE NAME
+Data Transformation related constants start with DATA_TRANSFORMATION VARIABLE NAME
 """
 
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
@@ -42,7 +42,7 @@ DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
 
 """
-Model Trainer ralated constants start with MODE TRAINER VARIABLE NAME
+Model Trainer related constants start with MODEL_TRAINER VARIABLE NAME
 """
 
 MODEL_TRAINER_DIR_NAME: str = "model_trainer"
@@ -53,12 +53,12 @@ MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD: float = 0.05
 
 
 """
-Model Trainer ralated constants start with MODE TRAINER VARIABLE NAME
+Model evaluation related constants start with MODEL_EVALUATION VARIABLE NAME
 """
 MODEL_EVALUATION_DIR_NAME: str = "model_evaluation"
 MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
 MODEL_EVALUATION_REPORT_NAME= "report.yaml"
 
-
+"""Model pusher related constants starts with MODEL_PUSHER VARIABLE NAME"""
 MODEL_PUSHER_DIR_NAME = "model_pusher"
 MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
