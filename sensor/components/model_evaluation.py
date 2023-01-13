@@ -31,6 +31,9 @@ class ModelEvaluation:
             train_df = pd.read_csv(valid_train_file_path)
             test_df = pd.read_csv(valid_test_file_path)
             df = pd.concat([train_df, test_df])
+            y_true = df[TARGET_COLUMN]
+            df.drop(TARGET_COLUMN,  axis=1,inplace=True)
+            y_true.replace(TargetValueMapping().to_dict(),inplace=True)
             
             #check if model is avasilable.if not availabel return ModelEvaluationArtifact
             train_model_file_path = self.model_trainer_artifact.trained_model_file_path
@@ -52,7 +55,7 @@ class ModelEvaluation:
             latest_model = load_object(file_path=latest_model_path)
             train_model = load_object(file_path=train_model_file_path)
             #calculating predictions
-            y_true = df[TARGET_COLUMN]
+            
             y_train_pred = train_model.predict(df)
             y_latest_pred = latest_model.predict(df)
             trained_metric = get_classification_score(y_true, y_train_pred)
@@ -71,7 +74,7 @@ class ModelEvaluation:
                     train_model_metric_artifact=trained_metric,
                     best_model_metric_artifact=latest_metric
                     )
-            model_eval_report = model_evaluation_artifact.__dict__()
+            model_eval_report = model_evaluation_artifact.__dict__
             #saving reports
             write_yaml_file(self.model_eval_config.report_file_path,model_eval_report)
             #logging
